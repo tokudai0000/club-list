@@ -7,6 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
   </head>
+  <script>
+    function PostMessage(url) {
+      window.webkit.messageHandlers.test1.postMessage(url)
+    }
+  </script>
 
   <body>
     <!-- <div class="title">
@@ -18,25 +23,45 @@
 
         <!-- 部活リストテンプレここから
 
-          ↓ href="リンク先URL"
+          ↓ PostMessage('リンク先URL')
 
         ===通常===
-          <a href="" class="list-group-item list-group-item-action">
+          <a onclick="PostMessage('')" class="list-group-item list-group-item-action">
           ○○部
         </a>
 
         ===リンクがまだの部活===
-          <a href="" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">
+          <a onclick="PostMessage()" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">
             リンク無し部
           </a>
 
         テンプレここまで -->
 
-        <a href="https://www.instagram.com/tokushimaucc/" class="list-group-item list-group-item-action">
+        <h2>大学公認学生団体</h2>
+        <h5>部活動・サークル</h5>
+        <a onclick="PostMessage('https://www.instagram.com/tokushimaucc/')" class="list-group-item list-group-item-action">
           サイクリング部
         </a>
+        <a onclick="PostMessage('https://tokusoundcreate.jimdofree.com/')" class="list-group-item list-group-item-action">
+          作曲DTM研究部
+        </a>
+
+        <p></p>
+
+        <h5>学生団体</h5>
+        <a onclick="PostMessage('https://lit.link/developers')" class="list-group-item list-group-item-action">
+          アプリ開発プロジェクト
+        </a>
+
+        <p></p>
+
+        <h2>大学非公認学生団体</h2>
+
+        <a onclick="PostMessage('https://twitter.com/tuac2_2020')" class="list-group-item list-group-item-action">
+          サバゲー同好会
+        </a>
+
       </div>
-
-
+    </div>
   </body>
 </html>
