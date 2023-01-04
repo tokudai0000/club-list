@@ -8,28 +8,20 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
   </head>
   <script>
-    var postMessage = {
-      send: function(url) {
-        if (this.isIOS()) {
-          window.webkit.messageHandlers.tokumemoPlus.postMessage(url)
-        } else if (this.isAndroid()) {
-          MyApp[tokumemoPlus](url);
-          window.webkit.messageHandlers.tokumemoPlus.postMessage("https://www.google.com/search?q=android&rlz=1C5CHFA_enJP1039JP1039&sxsrf=ALiCzsZRceuQEIU_-Si1ofLoE9ZYsYCIIw%3A1672837037585&ei=rXe1Y9yqI4GhhwOTy5qADQ&ved=0ahUKEwictZHL-638AhWB0GEKHZOlBtAQ4dUDCA8&uact=5&oq=android&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIECCMQJzIECCMQJzIFCAAQgAQyCwgAEIAEELEDEIMBMgsIABCABBCxAxCDATIICAAQgAQQsQMyCAgAEIAEELEDMgsIABCABBCxAxCDATILCAAQgAQQsQMQgwE6BwgjEOoCECc6DQgAEI8BEOoCELQCGAE6BAgAEEM6DQgAEAQQgAQQsQMQgwE6BwgAEAQQgAQ6CggAEAQQgAQQsQNKBAhBGABKBAhGGAFQ3gNY9BBg1RNoAXABeACAAXiIAYUFkgEDNi4xmAEAoAEBsAEUwAEB2gEGCAEQARgK&sclient=gws-wiz-serp")
-        } else {
-          console.log('browser access.');
-          window.webkit.messageHandlers.tokumemoPlus.postMessage("https://www.google.com/search?q=else&rlz=1C5CHFA_enJP1039JP1039&oq=else&aqs=chrome..69i57j0i433i512j0i131i433i512j69i60l3j69i61j69i65.3776j1j7&sourceid=chrome&ie=UTF-8")
-        }
-      },
-      isIOS: function() {
-        return window.navigator.userAgent.indexOf('Sample-iOS-App') !== -1;
-      },
-      isAndroid: function() {
-        return window.navigator.userAgent.indexOf('Sample-Android-App') !== -1;
+
+    function PostMessage(url) {
+      const ua = navigator.userAgent
+      if (/android/i.test(ua)) {
+        window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/A")
       }
-    }
-    function PostMessage2() {
-      window.webkit.messageHandlers.test1.postMessage("https://www.instagram.com/tokushimaucc/")
-    }
+      else if (/iPad|iPhone|iPod/.test(ua))
+        || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1){
+          window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/B")
+      }
+      else {
+        window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/C")
+      }
+
   </script>
 
   <body>
