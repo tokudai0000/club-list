@@ -10,13 +10,12 @@
   <script>
 
     function PostMessage(url) {
-      const ua = navigator.userAgent
-      if (/android/i.test(ua)) {
+      const os = getMobileOS()
+      if (os == 'Android') {
         window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/A")
       }
-      else if (/iPad|iPhone|iPod/.test(ua))
-        || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1){
-          window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/B")
+      else if (os == 'iOS') {
+        window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/B")
       }
       else {
         window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/C")
