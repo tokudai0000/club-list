@@ -9,7 +9,11 @@
   </head>
   <script>
     function PostMessage(url) {
-      window.webkit.messageHandlers.test1.postMessage(url)
+      // Android用
+      MyApp[tokumemoPlus](url);
+      
+      // iOS用
+      window.webkit.messageHandlers.tokumemoPlus.postMessage(url)
     }
   </script>
 
