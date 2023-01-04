@@ -9,7 +9,10 @@
   </head>
   <script>
     function PostMessage(url) {
-      window.print(url);
+      window.webkit.messageHandlers.test1.postMessage(url)
+    }
+    function PostMessage2() {
+      window.webkit.messageHandlers.test1.postMessage("https://www.instagram.com/tokushimaucc/")
     }
   </script>
 
@@ -41,12 +44,13 @@
           サイクリング部
         </a>
 
-        <a onclick="window.print('a');" class="list-group-item list-group-item-action">
-          サイクリング部
+
+        <a onclick="PostMessage('https://www.instagram.com/tokushimaucc/')" class="list-group-item list-group-item-action">
+          サイクリング部2
         </a>
 
-        <a onclick="PostMessage()" class="list-group-item list-group-item-action">
-          サイクリング部
+        <a onclick="PostMessage2()" class="list-group-item list-group-item-action">
+          サイクリング部3
         </a>
 
       </div>
