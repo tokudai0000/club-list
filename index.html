@@ -17,6 +17,15 @@
       window.webkit.messageHandlers.tokumemoPlus.postMessage(url)
     }
 
+    function test2(url) {
+      if ( navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPad') > 0 || navigator.userAgent.indexOf('iPod') > 0) {
+        document.getElementById("text").innerHTML = "iphone"
+      } else {
+        document.getElementById("text").innerHTML = "Android"
+      }
+    }
+
+
     function test(url) {
       document.getElementById("text").innerHTML = url
     }
@@ -48,6 +57,10 @@
         <p id="text"></p>
         <a onclick="test('cc/')" class="list-group-item list-group-item-action">
           test
+        </a>
+        <p id="tex"></p>
+        <a onclick="test2('cc/22')" class="list-group-item list-group-item-action">
+          test2
         </a>
         <h2>大学公認学生団体</h2>
         <h5>部活動・サークル</h5>
