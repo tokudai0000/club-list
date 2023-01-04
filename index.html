@@ -8,20 +8,12 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
   </head>
   <script>
-
     function PostMessage(url) {
-      const os = getMobileOS()
-      if (os == 'Android') {
-        window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/A")
-      }
-      else if (os == 'iOS') {
-        window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/B")
-      }
-      else {
-        window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/C")
-      }
+      // iOS用
+      window.webkit.messageHandlers.tokumemoPlus.postMessage(url)
+      // Android用
+      MyApp[tokumemoPlus](url)
     }
-
   </script>
 
   <body>
@@ -48,16 +40,10 @@
 
         テンプレここまで -->
 
-        <h2>大学公認学生団体2</h2>
+        <h2>大学公認学生団体</h2>
         <h5>部活動・サークル</h5>
         <a onclick="PostMessage('https://www.instagram.com/tokushimaucc/')" class="list-group-item list-group-item-action">
           サイクリング部
-        </a>
-        <a onclick="window.webkit.messageHandlers.tokumemoPlus.postMessage('https://ja.wikipedia.org/wiki/A')" class="list-group-item list-group-item-action">
-          サイクリング部2
-        </a>
-        <a onclick="alert('aa')" class="list-group-item list-group-item-action">
-          サイクリング部3
         </a>
         <a onclick="PostMessage('https://tokusoundcreate.jimdofree.com/')" class="list-group-item list-group-item-action">
           作曲DTM研究部
