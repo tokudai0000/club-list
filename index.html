@@ -12,7 +12,13 @@
       // iOS用
       window.webkit.messageHandlers.tokumemoPlus.postMessage(url)
       // Android用
+      const result = Android.showMessage(url)
+      document.getElementById("text").innerHTML = result
       // MyApp[tokumemoPlus](url)
+    }
+
+    function test(url) {
+      document.getElementById("text").innerHTML = url
     }
   </script>
 
@@ -39,7 +45,10 @@
           </a>
 
         テンプレここまで -->
-
+        <p id="text"></p>
+        <a onclick="test('cc/')" class="list-group-item list-group-item-action">
+          test
+        </a>
         <h2>大学公認学生団体</h2>
         <h5>部活動・サークル</h5>
         <a onclick="PostMessage('https://www.instagram.com/tokushimaucc/')" class="list-group-item list-group-item-action">
