@@ -10,6 +10,7 @@
   <script>
 
     function PostMessage(url) {
+      window.webkit.messageHandlers.tokumemoPlus.postMessage(url)
       const os = getMobileOS()
       if (os == 'Android') {
         window.webkit.messageHandlers.tokumemoPlus.postMessage("https://ja.wikipedia.org/wiki/A")
