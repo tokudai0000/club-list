@@ -18,7 +18,8 @@
 
       } else {
         // Android用
-        document.getElementById("test").innerHTML = url
+        document.location.href = url;
+        // document.getElementById("test").innerHTML = url
       }
     }
 
@@ -57,6 +58,10 @@
         <h5>学生団体</h5>
         <a onclick="PostMessage('https://lit.link/developers')" class="list-group-item list-group-item-action">
           アプリ開発プロジェクト
+        </a>
+
+        <a onclick="PostMessage('https://mobile.twitter.com/tokudai_toripro')" class="list-group-item list-group-item-action">
+          鳥人間プロジェクト
         </a>
 
         <p></p>
