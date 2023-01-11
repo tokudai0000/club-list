@@ -11,17 +11,16 @@
   <script>
 
     function PostMessage(url) {
-      document.location.href = url;
 
-      // if ( navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPad') > 0 || navigator.userAgent.indexOf('iPod') > 0) {
-      //   // iOS用
-      //   window.webkit.messageHandlers.tokumemoPlus.postMessage(url)
+      if ( navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPad') > 0 || navigator.userAgent.indexOf('iPod') > 0) {
+        // iOS用
+        window.webkit.messageHandlers.tokumemoPlus.postMessage(url)
 
-      // } else {
-      //   // Android用
-      //   document.location.href = url;
-      //   // document.getElementById("test").innerHTML = url
-      // }
+      } else {
+        // Android用
+        document.location.href = url;
+        // document.getElementById("test").innerHTML = url
+      }
     }
 
   </script>
