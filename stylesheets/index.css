@@ -19,9 +19,34 @@ body {
   color: aliceblue;
 }
 
+.table {
+  margin: 0 0 0 30px;
+  margin-bottom: 4em;
+}
+
 .contents {
   margin: 16px;
 }
 
+.etc {
+  padding: 0 0 0 20px;
+  font-size: 10px;
+  line-height: 1.4;
+}
 
+h2 {
+  padding: 0 0 0 10px;
+  border-left: solid 7px #01bd5a;
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+h5 {
+  margin: 0 0 0 30px;
+  padding: 0 0 4px;
+  font-size: 30px;
+  border-bottom: 4px solid #d2e3de;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
 
