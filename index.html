@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>徳島大学部活・サークル一覧</title>
+
+    <!-- Bootstrapを使用 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://tokudai0000.github.io/club-list/stylesheets/index.css">
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="https://tokudai0000.github.io/club-list/stylesheets/index.css"> -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
   </head>
 
   <script>
@@ -37,36 +42,37 @@
         ↓ PostMessage('リンク先URL')
 
       ===通常===
-        <a onclick="PostMessage('')" class="list-group-item list-group-item-action">
-        ○○部
-      </a>
+        <li onclick="PostMessage('https://www.instagram.com/tokushimaucc/')" class="list-group-item list-group-item-action tableList"> サイクリング部 </li>
 
       ===リンクがまだの部活===
         <a onclick="PostMessage()" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">
           リンク無し部
         </a>
+        <li class="list-group-item list-group-item-action tableList disabled"  tabindex="-1" aria-disabled="true"> サイクリング部 </li>
 
       テンプレここまで -->
 
       <h2>大学公認学生団体</h2>
 
 
-      <h5>部活動・サークル</h5>
 
       <ui class="list-group list-group-flush table">
 
-        <li onclick="PostMessage('https://www.instagram.com/tokushimaucc/')" class="list-group-item list-group-item-action"> サイクリング部1 </li>
+        <h5>部活動・サークル</h5>
+
+        <li onclick="PostMessage('https://www.instagram.com/tokushimaucc/')" class="list-group-item list-group-item-action tableList"> サイクリング部 </li>
 
       </ui>
 
 
-      <h5>学生団体</h5>
 
       <ui class="list-group list-group-flush table">
 
-        <a onclick="PostMessage('https://lit.link/developers')" class="list-group-item list-group-item-action"> アプリ開発プロジェクト </a>
+        <h5>学生団体</h5>
 
-        <a onclick="PostMessage('https://mobile.twitter.com/tokudai_toripro')" class="list-group-item list-group-item-action"> 鳥人間プロジェクト </a>
+        <a onclick="PostMessage('https://lit.link/developers')" class="list-group-item list-group-item-action tableList"> アプリ開発プロジェクト </a>
+
+        <a onclick="PostMessage('https://mobile.twitter.com/tokudai_toripro')" class="list-group-item list-group-item-action tableList"> 鳥人間プロジェクト </a>
 
       </ui>
 
@@ -78,24 +84,26 @@
 
       <h2>大学非公認学生団体</h2>
 
-
-      <h5>サークル・同好会・団体</h5>
-
       <ui class="list-group list-group-flush table">
 
-        <li onclick="PostMessage('https://www.instagram.com/tokushimaucc/')" class="list-group-item list-group-item-action"> 〇〇同好会 </li>
+        <h5>サークル・同好会・団体</h5>
+
+        <li class="list-group-item tableList"  tabindex="-1" aria-disabled="true"> 〇〇サークル <dd> URL無し</dd> </li>
+        <li class="list-group-item tableList"  tabindex="-1" aria-disabled="true"> 〇〇同好会 <dd> URL無し</dd> </li>
+
 
       </ui>
 
     </div>
 
-
-
-
-    <div class = "etc">
-      <p>現在、記載に許可していただける団体数を増やす活動中です。<br> ここに載せても良い団体様がいらっしゃいましたら、お手数ですが下にお問い合わせお願いします。</p>
-      <a href="https://lit.link/developers">お問い合わせはこちら</a>
-    </div>
-
   </body>
+
+
+  <footer>
+    <div class = "footer-text">
+      <p> 現在、記載に許可していただける団体数を増やす活動中です。<br> ここに載せても良い団体様がいらっしゃいましたら、お手数ですが下にお問い合わせお願いします。 </p>
+      <a class = "footer-text" href="https://lit.link/developers">お問い合わせはこちら</a>
+    </div>
+  </footer>
+
 </html>
