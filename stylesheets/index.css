@@ -22,7 +22,7 @@ h5 {
 
 .table {
   width: auto;
-  margin: 0 10px 0 10px;
+  margin: 0 10px 0 0px;
   margin-bottom: 2em;
   font-family: 'Hiragino Maru Gothic Pro';
 }
@@ -31,9 +31,9 @@ h5 {
   background-color: #ffbf0016;
 }
 
-dd {
+.explanation {
   font-size: 10px;
-  line-height: 0.2;
+  margin-bottom: 0;
 }
 
 footer {
