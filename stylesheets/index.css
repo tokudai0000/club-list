@@ -49,3 +49,7 @@ footer {
   font-family: 'Hiragino Maru Gothic Pro';
   color: #fff;
 }
+
+.footer-text p {
+  margin-bottom: 0;
+}
